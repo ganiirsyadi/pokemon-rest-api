@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "c2332240-e232-4c3f-b79a-29e968db8d72",
+		"name": "Pokemon-REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"57072107-e96e-4bf7-83e9-23c740183216\",\r\n    \"number\": \"002\",\r\n    \"name\": \"Bulbasaur\",\r\n    \"types\": [\r\n        \"Grass\",\r\n        \"Poison\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api"
+					]
+				},
+				"description": "Accept JSON type body, example:\r\n\r\n{ \"id\": \"57072197-e96e-4bf7-83e9-23c740183216\", \"number\": \"001\", \"name\": \"Bulbasaur\", \"types\": [ \"Grass\", \"Poison\" ] }"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/:id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"57072197-e96e-4bf7-83e9-23c740183216\",\r\n    \"number\": \"001\",\r\n    \"name\": \"Charizard\",\r\n    \"types\": [\r\n        \"Fire\",\r\n        \"Water\",\r\n        \"Dark\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/57072197-e96e-4bf7-83e9-23c740183216",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"57072197-e96e-4bf7-83e9-23c740183216"
+					]
+				},
+				"description": "Accept JSON type body, example:\r\n\r\n{\r\n  \"id\": \"57072197-e96e-4bf7-83e9-23c740183216\",\r\n  \"number\": \"001\",\r\n  \"name\": \"Bulbasaur\",\r\n  \"types\": [\r\n    \"Grass\",\r\n    \"Poison\"\r\n  ]\r\n}\r\n\r\nParameter:\r\n- id: the pokemon id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/?limit=2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/?limit=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						""
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				},
+				"description": "Query parameter:\r\n- limit (int): \r\n    to limit the total result"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/57072197-e96e-4bf7-83e9-23c740183211",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"57072197-e96e-4bf7-83e9-23c740183211"
+					]
+				},
+				"description": "Parameter:\r\n- id: the pokemon id"
+			},
+			"response": []
+		}
+	]
+}
