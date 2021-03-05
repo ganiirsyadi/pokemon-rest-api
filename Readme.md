@@ -1,4 +1,5 @@
 # Project: Pokemon-REST
+This project is built with Node.js, Express.js, and SQLite.
 ## How to run the application
 - create an ``.env`` file (check the .env.sample for reference)
 - run ``npm install``
